@@ -211,154 +211,184 @@
   </div>
 
   <!-- left -->
-  <div class="row">
-    <div class="col-sm-3 col-md-2 sidebar navbar-fixed-left">
-      <ul class="nav nav-sidebar">
-        <li class="active">
-          <a href="#">首页</a>
-        </li>
-      </ul>
-      <ul class="nav nav-sidebar">
-        <li>
-          <a href="#">信息建立</a>
-        </li>
-        <li>
-          <a href="#">信息查询</a>
-        </li>
-        <li>
-          <a href="#">信息管理</a>
-        </li>
-      </ul>
-      <ul class="nav nav-sidebar">
-        <li>
-          <a href="">设置</a>
-        </li>
-      </ul>
-      <ul class="nav nav-sidebar">
-        <li>
-          <a href="">帮助</a>
-        </li>
-      </ul>
+  <div class="container container-fluid">
+    <div class="row">
+      <div class="col-sm-3 col-md-2 sidebar navbar-fixed-left">
+        <ul class="nav nav-sidebar">
+          <li class="active">
+            <a href="#">首页</a>
+          </li>
+        </ul>
+        <ul class="nav nav-sidebar">
+          <li>
+            <a href="#">信息建立</a>
+          </li>
+          <li>
+            <a href="#">信息查询</a>
+          </li>
+          <li>
+            <a href="#">信息管理</a>
+          </li>
+        </ul>
+        <ul class="nav nav-sidebar">
+          <li>
+            <a href="">设置</a>
+          </li>
+        </ul>
+        <ul class="nav nav-sidebar">
+          <li>
+            <a href="">帮助</a>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
   <!-- right -->
-  <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-    <h2 class="page-header">管理控制台</h2>
-
-    <div>
-      <button type="button" class="btn btn-default">操作一</button>
-      <button type="button" class="btn btn-primary">操作二</button>
-      <button type="button" class="btn btn-success">操作三</button>
-      <button type="button" class="btn btn-info">操作四</button>
-      <button type="button" class="btn btn-warning">操作五</button>
-      <button type="button" class="btn btn-danger">操作六</button>
-    </div>
-    <div class="row">
-      <div class="col-md-6 mtp">
-        <div class="panel panel-primary">
-          <div class="panel-heading">
-            <h3 class="panel-title">最新提醒</h3>
+  <div class="container container-fluid">
+    <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+      <div class="row">
+        <h2 class="page-header">管理控制台</h2>
+      </div>
+      <div class="row">
+        <button type="button" class="btn btn-default">操作一</button>
+        <button type="button" class="btn btn-primary">操作二</button>
+        <button type="button" class="btn btn-success">操作三</button>
+        <button type="button" class="btn btn-info">操作四</button>
+        <button type="button" class="btn btn-warning">操作五</button>
+        <button type="button" class="btn btn-danger">操作六</button>
+      </div>
+      <div class="row">
+        <div class="col-md-6 mtp">
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title">最新提醒</h3>
+            </div>
+            <div class="panel-body">
+              <div class="alert alert-success" role="alert"> <strong>提示</strong>
+                您的订单（2014001）已审批通过！
+              </div>
+              <div class="alert alert-danger" role="alert"> <strong>提示</strong>
+                您的订单（2014001）已被打回！
+              </div>
+              <div class="alert alert-warning" role="alert">
+                <strong>提示</strong>
+                您的订单（2014001）客户付款延迟！
+              </div>
+            </div>
           </div>
-          <div class="panel-body">
-            <div class="alert alert-success" role="alert"> <strong>提示</strong>
-              您的订单（2014001）已审批通过！
+        </div>
+
+        <div class="col-md-6 mtp">
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title">我的任务</h3>
             </div>
-            <div class="alert alert-danger" role="alert"> <strong>提示</strong>
-              您的订单（2014001）已被打回！
-            </div>
-            <div class="alert alert-warning" role="alert">
-              <strong>提示</strong>
-              您的订单（2014001）客户付款延迟！
+            <div class="panel-body">
+              <ul class="nav nav-pills nav-stacked" role="tablist">
+                <li role="presentation">
+                  <a class="alert alert-info" href="#">
+                    订单审批
+                    <span class="badge pull-right">42</span>
+                  </a>
+                </li>
+                <li role="presentation">
+                  <a class="alert alert-info" href="#">
+                    订单审批
+                    <span class="badge pull-right">42</span>
+                  </a>
+                </li>
+                <li role="presentation">
+                  <a class="alert alert-info" href="#">
+                    订单审批
+                    <span class="badge pull-right">42</span>
+                  </a>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
       </div>
-
-      <div class="col-md-6 mtp">
+      <div class="row">
+        <div class="col-md-6 col-sm-12 col-xs-12">
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title">最新订单</h3>
+            </div>
+            <div class="panel-body">
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>产品</th>
+                    <th>数量</th>
+                    <th>总金额</th>
+                    <th>业务员</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>Apple Macbook air</td>
+                    <td>10</td>
+                    <td>80000</td>
+                    <td>王小贱</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Apple iPad air</td>
+                    <td>20</td>
+                    <td>65000</td>
+                    <td>尹开花</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>Apple Macbook pro</td>
+                    <td>5</td>
+                    <td>50000</td>
+                    <td>刘老根</td>
+                  </tr>
+                </tbody>
+              </table>
+              <button type="button" class="btn btn-primary butonjl">查看详情&raquo;</button>
+            </li>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-sm-12 col-xs-12">
         <div class="panel panel-primary">
           <div class="panel-heading">
-            <h3 class="panel-title">我的任务</h3>
+            <h3 class="panel-title">工程进度</h3>
           </div>
           <div class="panel-body">
             <ul class="nav nav-pills nav-stacked" role="tablist">
               <li role="presentation">
-                <a class="alert alert-info" href="#">订单审批</a>
+                <button type="button" class="btn btn-primary butonjl">水井挖掘工程</button>
               </li>
               <li role="presentation">
-                <a class="alert alert-info" href="#">订单审批</a>
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%;">
+                    <span class="sr-only">40% Complete</span>
+                  </div>
+                </div>
               </li>
               <li role="presentation">
-                <a class="alert alert-info" href="#">订单审批</a>
+                <button type="button" class="btn btn-danger butonjl">基础工程</button>
+              </li>
+              <li role="presentation">
+                <div class="progress">
+                  <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                    <span class="sr-only">60% Complete</span>
+                  </div>
+                </div>
               </li>
             </ul>
           </div>
         </div>
       </div>
     </div>
-    <div class="row">
-      <div class="col-md-6 mtp ">
-        <div class="panel panel-primary">
-          <div class="panel-heading">
-            <h3 class="panel-title">最新订单</h3>
-          </div>
-          <table class="table table-striped">
-            <thead>
-              <tr>
-                <th>#</th>
-                <th>产品</th>
-                <th>数量</th>
-                <th>总金额</th>
-                <th>业务员</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>1</td>
-                <td>Mark</td>
-                <td>10</td>
-                <td>80000</td>
-                <td>张晓萌</td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>Jacob</td>
-                <td>20</td>
-                <td>30000</td>
-                <td>王小贱</td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td>Larry</td>
-                <td>30</td>
-                <td>40000</td>
-                <td>陈小春</td>
-              </tr>
-            </tbody>
-          </table>
-          <button type="button" class="see btn btn-primary">查看详细>></button>
-        </div>
-      </div>
-      <div class="col-md-6 mtp">
-        <div class="panel panel-primary">
-          <div class="panel-heading">
-            <h3 class="panel-title">工程进度</h3>
-          </div>
-          <button type="button" class="water btn btn-primary">水井挖掘工程</button>
-          <div class="progress waters">
-            <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
-              <span class="sr-only">60% Complete</span>
-            </div>
-          </div>
-          <button type="button" class="water btn btn-danger">基建工程</button>
-          <div class="progress waters">
-            <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
-              <span class="sr-only">80% Complete (danger)</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+  </div>
+</div>
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
 </body>
-  </html>
+</html>
