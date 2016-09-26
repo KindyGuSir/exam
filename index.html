@@ -4,15 +4,349 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Bootstrap demo</title>
+  <title>结课项目</title>
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <!--[if lt IE 9]>
   <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
   <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
   <![endif]-->
+  <style>
+    .sidebar {
+        background-color: #f5f5f5;
+        border-right: 1px solid #eee;
+        bottom: 0;
+        display: block;
+        left: 0;
+        overflow-x: hidden;
+        overflow-y: auto;
+        padding: 20px;
+        position: fixed;
+        top: 51px;
+        z-index: 1000;
+    }
+    .nav-sidebar > .active > a, .nav-sidebar > .active > a:hover, .nav-sidebar > .active > a:focus {
+        background-color: #428bca;
+        color: #fff;
+    }
+    /*
+     * Base structure
+     */
+
+    /* Move down content because we have a fixed navbar that is 50px tall */
+    body {
+      padding-top: 50px;
+    }
+
+
+    /*
+     * Global add-ons
+     */
+
+    .sub-header {
+      padding-bottom: 10px;
+      border-bottom: 1px solid #eee;
+    }
+
+    /*
+     * Top navigation
+     * Hide default border to remove 1px line.
+     */
+    .navbar-fixed-top {
+      border: 0;
+    }
+
+    /*
+     * Sidebar
+     */
+
+    /* Hide for mobile, show later */
+    .sidebar {
+      display: none;
+    }
+    @media (min-width: 768px) {
+      .sidebar {
+        position: fixed;
+        top: 51px;
+        bottom: 0;
+        left: 0;
+        z-index: 1000;
+        display: block;
+        padding: 20px;
+        overflow-x: hidden;
+        overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+        background-color: #f5f5f5;
+        border-right: 1px solid #eee;
+      }
+    }
+
+    /* Sidebar navigation */
+    .nav-sidebar {
+      margin-right: -21px; /* 20px padding + 1px border */
+      margin-bottom: 20px;
+      margin-left: -20px;
+    }
+    .nav-sidebar > li > a {
+      padding-right: 20px;
+      padding-left: 20px;
+    }
+    .nav-sidebar > li > a:hover,
+    .nav-sidebar > li > a:focus,
+    .nav-sidebar > .active > a,
+    .nav-sidebar > .active > a:hover,
+    .nav-sidebar > .active > a:focus {
+      color: #fff;
+      background-color: #428bca;
+    }
+
+
+    /*
+     * Main content
+     */
+
+    .main {
+      padding: 20px;
+    }
+    @media (min-width: 768px) {
+      .main {
+        padding-right: 40px;
+        padding-left: 40px;
+      }
+    }
+    .main .page-header {
+      margin-top: 0;
+    }
+
+
+    /*
+     * Placeholder dashboard ideas
+     */
+
+    .placeholders {
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    .placeholders h4 {
+      margin-bottom: 0;
+    }
+    .placeholder {
+      margin-bottom: 20px;
+    }
+    .placeholder img {
+      display: inline-block;
+      border-radius: 50%;
+    }
+    .mtp{
+      margin-top: 20px;
+    }
+    .col-md-6{
+      padding-left: 0;
+    }
+    .see{
+      margin: 10px;
+    }
+    .water{
+      margin: 10px;
+    }
+    .waters{
+      margin: 0px 10px 10px 10px;
+    }
+  </style>
 </head>
 <body>
- 
+  <!-- nav -->
+  <div class="navbar-wrapper navbar-fixed-top">
+    <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">某管理网站</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse" aria-expanded="false" style="height: 1px;">
+          <ul class="nav navbar-nav">
+            <li class="active">
+              <a href="#">首页</a>
+            </li>
+            <li class="dropdown">
+              <a class="dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">
+                功能
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu" role="menu">
+                <li class="dropdown-header">业务功能</li>
+                <li>
+                  <a href="#">信息建立</a>
+                </li>
+                <li>
+                  <a href="#">信息查询</a>
+                </li>
+                <li>
+                  <a href="#">信息管理</a>
+                </li>
+                <li class="divider"></li>
+                <li class="dropdown-header">系统功能</li>
+                <li>
+                  <a href="#">设置</a>
+                </li>
+              </ul>
+              <li>
+                <a href="#contact">帮助</a>
+              </li>
+            </li>
+          </ul>
+          <form class="navbar-form navbar-right pull-right" role="form">
+            <div class="form-group">
+              <input class="form-control" placeholder="用户名..." type="text"></div>
+            <div class="form-group">
+              <input class="form-control" placeholder="密码..." type="password"></div>
+          </form>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <!-- left -->
+  <div class="row">
+    <div class="col-sm-3 col-md-2 sidebar navbar-fixed-left">
+      <ul class="nav nav-sidebar">
+        <li class="active">
+          <a href="#">首页</a>
+        </li>
+        <li>
+          <a href="#">信息建立</a>
+        </li>
+        <li>
+          <a href="#">信息查询</a>
+        </li>
+        <li>
+          <a href="#">信息管理</a>
+        </li>
+      </ul>
+      <ul class="nav nav-sidebar">
+        <li>
+          <a href="">设置</a>
+        </li>
+        <li>
+          <a href="">帮助</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+    <h2 class="page-header">管理控制台</h2>
+   <div>
+      <button type="button" class="btn btn-default">操作一</button>
+      <button type="button" class="btn btn-primary">操作二</button>
+      <button type="button" class="btn btn-success">操作三</button>
+      <button type="button" class="btn btn-info">操作四</button>
+      <button type="button" class="btn btn-warning">操作五</button>
+      <button type="button" class="btn btn-danger">操作六</button>
+    </div>
+    <div class="col-md-6 mtp">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h3 class="panel-title">最新提醒</h3>
+        </div>
+        <div class="panel-body">
+          <div class="alert alert-success" role="alert"> <strong>提示</strong>
+            您的订单（2014001）已审批通过！
+          </div>
+          <div class="alert alert-danger" role="alert"> <strong>提示</strong>
+            您的订单（2014001）已被打回！
+          </div>
+          <div class="alert alert-warning" role="alert">
+            <strong>提示</strong>
+            您的订单（2014001）客户付款延迟！
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 mtp">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h3 class="panel-title">我的任务</h3>
+        </div>
+        <div class="panel-body">
+          <div class="alert alert-info" role="alert">
+            订单审批
+            <span class="badge pull-right">42</span>
+          </div>
+          <div class="alert alert-info" role="alert">
+            收款确认
+            <span class="badge pull-right">20</span>
+          </div>
+          <div class="alert alert-info" role="alert">
+            付款确认
+            <span class="badge pull-right">10</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 mtp">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h3 class="panel-title">最新订单</h3>
+        </div>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>产品</th>
+              <th>数量</th>
+              <th>总金额</th>
+              <th>业务员</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Mark</td>
+              <td>10</td>
+              <td>80000</td>
+              <td>张晓萌</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Jacob</td>
+              <td>20</td>
+              <td>30000</td>
+              <td>王小贱</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Larry</td>
+              <td>30</td>
+              <td>40000</td>
+              <td>陈小春</td>
+            </tr>
+          </tbody>
+        </table>
+        <button type="button" class="see btn btn-primary">查看详细>></button>
+      </div>
+    </div>
+    <div class="col-md-6 mtp">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h3 class="panel-title">工程进度</h3>
+        </div>
+       <button type="button" class="water btn btn-primary">水井挖掘工程</button>
+       <div class="progress waters">
+         <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+           <span class="sr-only">60% Complete</span>
+         </div>
+       </div>
+       <button type="button" class="water btn btn-danger">基建工程</button>
+       <div class="progress waters">
+         <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+           <span class="sr-only">80% Complete (danger)</span>
+         </div>
+      </div>
+    </div>
+  </div>
   <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
 </body>
