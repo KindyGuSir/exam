@@ -97,62 +97,6 @@
       color: #fff;
       background-color: #428bca;
     }
-
-
-    /*
-     * Main content
-     */
-
-    .main {
-      padding: 20px;
-    }
-    @media (min-width: 768px) {
-      .main {
-        padding-right: 40px;
-        padding-left: 40px;
-      }
-    }
-    .main .page-header {
-      margin-top: 0;
-    }
-
-
-    /*
-     * Placeholder dashboard ideas
-     */
-
-    .placeholders {
-      margin-bottom: 30px;
-      text-align: center;
-    }
-    .placeholders h4 {
-      margin-bottom: 0;
-    }
-    .placeholder {
-      margin-bottom: 20px;
-    }
-    .placeholder img {
-      display: inline-block;
-      border-radius: 50%;
-    }
-    .mtp{
-      margin-top: 20px;
-    }
-    .col-md-6{
-      padding-left: 0;
-    }
-    .see{
-      margin: 10px;
-    }
-    .water{
-      margin: 10px;
-    }
-    .waters{
-      margin: 0px 10px 10px 10px;
-    }
-    .btns{
-      margin-left: -15px;
-    }
   </style>
 </head>
 <body>
@@ -244,144 +188,139 @@
           </li>
         </ul>
       </div>
-    </div>
- <div class="row">
-    <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-      <div class="row">
+      <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
         <h2 class="page-header">管理控制台</h2>
-      </div>
-      <p class="btns">
-        <button type="button" class="btn btn-lg btn-default">操作一</button>
-        <button type="button" class="btn btn-lg btn-primary">操作二</button>
-        <button type="button" class="btn btn-lg btn-success">操作三</button>
-        <button type="button" class="btn btn-lg btn-info">操作四</button>
-        <button type="button" class="btn btn-lg btn-warning">操作五</button>
-        <button type="button" class="btn btn-lg btn-danger">操作六</button>
-      </p>
-      <div class="row">
-        <div class="col-md-6 mtp">
-          <div class="panel panel-primary">
-            <div class="panel-heading">
-              <h3 class="panel-title">最新提醒</h3>
+        <p>
+          <button type="button" class="btn btn-lg btn-default">操作一</button>
+          <button type="button" class="btn btn-lg btn-primary">操作二</button>
+          <button type="button" class="btn btn-lg btn-success">操作三</button>
+          <button type="button" class="btn btn-lg btn-info">操作四</button>
+          <button type="button" class="btn btn-lg btn-warning">操作五</button>
+          <button type="button" class="btn btn-lg btn-danger">操作六</button>
+        </p>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="panel panel-primary">
+              <div class="panel-heading">
+                <h3 class="panel-title">最新提醒</h3>
+              </div>
+              <div class="panel-body">
+                <div class="alert alert-success" role="alert"> <strong>提示</strong>
+                  您的订单（2014001）已审批通过！
+                </div>
+                <div class="alert alert-danger" role="alert"> <strong>提示</strong>
+                  您的订单（2014001）已被打回！
+                </div>
+                <div class="alert alert-warning" role="alert">
+                  <strong>提示</strong>
+                  您的订单（2014001）客户付款延迟！
+                </div>
+              </div>
             </div>
-            <div class="panel-body">
-              <div class="alert alert-success" role="alert"> <strong>提示</strong>
-                您的订单（2014001）已审批通过！
+          </div>
+          <div class="col-md-6">
+            <div class="panel panel-primary">
+              <div class="panel-heading">
+                <h3 class="panel-title">我的任务</h3>
               </div>
-              <div class="alert alert-danger" role="alert"> <strong>提示</strong>
-                您的订单（2014001）已被打回！
-              </div>
-              <div class="alert alert-warning" role="alert">
-                <strong>提示</strong>
-                您的订单（2014001）客户付款延迟！
+              <div class="panel-body">
+                <ul class="nav nav-pills nav-stacked" role="tablist">
+                  <li role="presentation">
+                    <a class="alert alert-info" href="#">
+                      订单审批
+                      <span class="badge pull-right">42</span>
+                    </a>
+                  </li>
+                  <li role="presentation">
+                    <a class="alert alert-info" href="#">
+                      订单审批
+                      <span class="badge pull-right">42</span>
+                    </a>
+                  </li>
+                  <li role="presentation">
+                    <a class="alert alert-info" href="#">
+                      订单审批
+                      <span class="badge pull-right">42</span>
+                    </a>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
         </div>
+        <div class="row">
+          <div class="col-md-6 col-sm-12 col-xs-12">
+            <div class="panel panel-primary">
+              <div class="panel-heading">
+                <h3 class="panel-title">最新订单</h3>
+              </div>
+              <div class="panel-body">
+                <table class="table table-striped">
+                  <thead>
+                    <tr>
+                      <th>#</th>
+                      <th>产品</th>
+                      <th>数量</th>
+                      <th>总金额</th>
+                      <th>业务员</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td>Apple Macbook air</td>
+                      <td>10</td>
+                      <td>80000</td>
+                      <td>王小贱</td>
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td>Apple iPad air</td>
+                      <td>20</td>
+                      <td>65000</td>
+                      <td>尹开花</td>
+                    </tr>
+                    <tr>
+                      <td>3</td>
+                      <td>Apple Macbook pro</td>
+                      <td>5</td>
+                      <td>50000</td>
+                      <td>刘老根</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <button type="button" class="btn btn-primary butonjl">查看详情&raquo;</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-sm-12 col-xs-12">
+            <div class="panel panel-primary">
+              <div class="panel-heading">
+                <h3 class="panel-title">工程进度</h3>
+              </div>
+              <div class="panel-body">
+                <h3>
+                  <span class="label label-primary">水井挖掘工程</span>
+                </h3>
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 70%;">
+                    <span class="sr-only">40% Complete</span>
+                  </div>
+                </div>
+                <h3>
+                  <span class="label label-danger">基础工程</span>
+                </h3>
+                <div class="progress">
+                  <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 80%;">
+                    <span class="sr-only">60% Complete</span>
+                  </div>
+                </div>
 
-        <div class="col-md-6 mtp">
-          <div class="panel panel-primary">
-            <div class="panel-heading">
-              <h3 class="panel-title">我的任务</h3>
-            </div>
-            <div class="panel-body">
-              <ul class="nav nav-pills nav-stacked" role="tablist">
-                <li role="presentation">
-                  <a class="alert alert-info" href="#">
-                    订单审批
-                    <span class="badge pull-right">42</span>
-                  </a>
-                </li>
-                <li role="presentation">
-                  <a class="alert alert-info" href="#">
-                    订单审批
-                    <span class="badge pull-right">42</span>
-                  </a>
-                </li>
-                <li role="presentation">
-                  <a class="alert alert-info" href="#">
-                    订单审批
-                    <span class="badge pull-right">42</span>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-6 col-sm-12 col-xs-12">
-          <div class="panel panel-primary">
-            <div class="panel-heading">
-              <h3 class="panel-title">最新订单</h3>
-            </div>
-            <div class="panel-body">
-              <table class="table table-striped">
-                <thead>
-                  <tr>
-                    <th>#</th>
-                    <th>产品</th>
-                    <th>数量</th>
-                    <th>总金额</th>
-                    <th>业务员</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>1</td>
-                    <td>Apple Macbook air</td>
-                    <td>10</td>
-                    <td>80000</td>
-                    <td>王小贱</td>
-                  </tr>
-                  <tr>
-                    <td>2</td>
-                    <td>Apple iPad air</td>
-                    <td>20</td>
-                    <td>65000</td>
-                    <td>尹开花</td>
-                  </tr>
-                  <tr>
-                    <td>3</td>
-                    <td>Apple Macbook pro</td>
-                    <td>5</td>
-                    <td>50000</td>
-                    <td>刘老根</td>
-                  </tr>
-                </tbody>
-              </table>
-              <button type="button" class="btn btn-primary butonjl">查看详情&raquo;</button>
-            </li>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6 col-sm-12 col-xs-12">
-        <div class="panel panel-primary">
-          <div class="panel-heading">
-            <h3 class="panel-title">工程进度</h3>
-          </div>
-          <div class="panel-body">
-            <h3>
-              <span class="label label-primary">水井挖掘工程</span>
-            </h3>
-            <div class="progress">
-              <div class="progress-bar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 70%;">
-                <span class="sr-only">40% Complete</span>
               </div>
             </div>
-            <h3>
-              <span class="label label-danger">基础工程</span>
-            </h3>
-            <div class="progress">
-              <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 80%;">
-                <span class="sr-only">60% Complete</span>
-              </div>
-            </div>
-
           </div>
         </div>
       </div>
-    </div>
     </div>
   </div>
   <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
